@@ -1,12 +1,335 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Book a Seat</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="semantic/semantic.min.css">
+  <script src="semantic/semantic.min.js"></script>
+  <style>
+      body {
+          background-color: #FFFFFF;
+      }
+      h1 {
+          padding-bottom: 500px;
+      }
+  </style>
+</head>
+<body>
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu">
+            <div class="left item">
+                <a class="ui inverted button" id="UserName">Home</a>
+            </div>
+            <div class="right item">
+              <a class="ui inverted button" id="SignOut">Sign out</a>
+            </div>
+          </div>
+        </div>
+        <div class="ui text container">
+          <h1 class="ui inverted header">
+            Book a Seat
+          </h1>
+          <p></p>
+        </div>
+    </div>
+
+    <div class="ui grid container" style="padding-top: 100px;">
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 1</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 2</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 3</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 4</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 5</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 6</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 7</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 8</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 9</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 10</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 11</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                  <div class="header">Seat 12</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Available for purchase</h4>
+                </div>
+                <div class="extra content">
+                  <div class="ui compact menu">
+                    <div class="ui simple dropdown item">
+                        Options
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                        <div class="item">Purchase</div>
+                        <div class="item">Reserve</div>
+                        <div class="item">Block</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
