@@ -48,11 +48,17 @@
               </div>
             </div>
             <div class="field">
-                <div class="ui left icon input">
-                  <i class="lock icon"></i>
-                  <input type="password" name="confPassword" placeholder="Confirm Password">
-                </div>
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="password" name="confPassword" placeholder="Confirm Password">
               </div>
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="org" id="org">
+                <label>Make an organiser account</label>
+              </div>
+            </div>
             <div class="ui fluid large blue submit button" id= "submit">Sign Up</div>
           </div>
     
@@ -132,14 +138,28 @@
     });
     </script>
     <script>
-        $("#form").submit(function(e) {
+        $("#form").submit(async function(e) {
             e.preventDefault();
             if($('.ui.form').form('is valid')) {
                 var email = document.getElementById("email").value;
                 var password = document.getElementById("password").value;
-                const auth = firebase.auth();
-                auth.createUserWithEmailAndPassword(email, password);
-                mainWindow.loadFile('login.html');
+                await firebase.auth().createUserWithEmailAndPassword(email, password);
+                var user = firebase.auth().currentUser;
+                var check = $('.ui.checkbox').checkbox("is checked");
+                if(check) {
+                  user.updateProfile({
+                    displayName: "org",
+                  }).then(function() {
+                    console.log("yay");
+                    document.location.href = "login.html";
+                  }).catch(function(error) {
+                    console.log("ballsack");
+                    console.log(error.message);
+                  });
+
+                } else {
+                  document.location.href = "login.html";
+                }
             };
          })
     </script>    

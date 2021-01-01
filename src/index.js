@@ -1,5 +1,8 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -11,9 +14,22 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1500,
     height: 900,
+    resizable: false,
+    titleBarStyle: 'hidden'
   });
   mainWindow.setMenu(null);
   // and load the index.html of the app.
+    var firebaseConfig = {
+      apiKey: "AIzaSyCXZjU9JlbThavMd6E9vWlYKj93tdlT9og",
+      authDomain: "bookaseat-7dc24.firebaseapp.com",
+      projectId: "bookaseat-7dc24",
+      storageBucket: "bookaseat-7dc24.appspot.com",
+      messagingSenderId: "687700833742",
+      appId: "1:687700833742:web:5691fb4c4e0a9e3d71a79f",
+      measurementId: "G-P6LHMC59XR"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
   mainWindow.loadFile(path.join(__dirname, 'login.html'));
 
   // Open the DevTools.

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Book a Seat</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="semantic/semantic.min.css">
+  <script src="semantic/semantic.min.js"></script>
+  <style>
+      body {
+          background-color: #FFFFFF;
+      }
+      h1 {
+          padding-bottom: 50px;
+      }
+      .ui.search > .results.visible {
+        position: relative;
+        margin: 0 auto;
+      }
+  </style>
+</head>
+<body>
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu">
+            <div class="left item">
+                <a class="ui inverted button" id="home" href="index.html">Home</a>
+            </div>
+            <div class="right item">
+              <a class="ui inverted button" id="SignOut">Sign out</a>
+            </div>
+          </div>
+        </div>
+        <div class="ui text container">
+          <h1 class="ui inverted header">
+            Reserve a Seat
+          </h1>
+          <p></p>
+        </div>
+    </div>
+    <h3 class="ui header center aligned">
+        Fill out the following to reserve your desired seat
+    </h3>
+    <div class="ui center aligned ui grid" style="padding-top: 10px;">
+        <form class="ui form" id="reserveForm">
+            <div class="field">
+                <label>Seat Number</label>
+                <input type="number" id="number" name="number" placeholder="0">
+            </div>
+            <div class="field">
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+                <label>Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+              </div>
+            <div class="field">
+                <label>Type of Customer</label>
+                <div class="ui selection dropdown">
+                    <input type="hidden" id="type" name="type">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Type of customer</div>
+                    <div class="menu">
+                        <div class="item" data-value="0">Discounted Guest (under 18 or over 65)</div>
+                        <div class="item" data-value="1">Special Guest (governor or staff members)</div>
+                        <div class="item" data-value="2">Full price Guest</div>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+              <div class="ui selection dropdown">
+                <input type="hidden" id="date" name="date">
+                <i class="dropdown icon"></i>
+                <div class="default text">Performance Date</div>
+                <div class="menu">
+                    <div class="item" data-value="01/31/2021">31st January 2021</div>
+                    <div class="item" data-value="02/28/2021">28th February 2021</div>
+                    <div class="item" data-value="03/31/2021">31st March 2021</div>
+                </div>
+              </div>
+            </div>
+              <div class="ui error message"></div>
+            <div class="ui submit button" tabindex="0">Submit</div>
+          </form>
+    </div>
+    <script>
+        $(document)
+          .ready(function() {
+            $('.ui.form')
+              .form({
+                fields: {
+                    number: {
+                        identifier : 'number',
+                        rules: [{
+                            type : 'empty',
+                            prompt : 'Please enter the seat number to purchase'
+                        }]
+                    },
+                    firstName : {
+                        identifier  : 'firstName',
+                        rules: [
+                        {
+                            type   : 'empty',
+                            prompt : 'Please enter your first name'
+                        }
+                        ]
+                    },
+                    lastName: {
+                        identifier  : 'lastName',
+                        rules: [
+                        {
+                            type   : 'empty',
+                            prompt : 'Please enter your last name'
+                        },
+                        ]
+                    },
+                    phoneNumber: {
+                        identifier : 'phoneNumber',
+                        rules: [{
+                            type : 'empty',
+                            prompt : 'Please enter your phone number'
+                        }]
+                    },
+                    type: {
+                        identifier : 'type',
+                        rules : [{
+                            type: 'empty',
+                            prompt : 'Please select an option'
+                        }]
+                    },
+                    date: {
+                        identifier : 'date',
+                        rules : [{
+                            type: 'empty',
+                            prompt: 'Please enter a performance date'
+                        }]
+                    }
+                    }
+                })
+                ;
+             })
+            ;
+        </script>
+    <script>
+        $('.ui.selection.dropdown').dropdown();
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="reserve.js"></script>
+</body>
+</html>

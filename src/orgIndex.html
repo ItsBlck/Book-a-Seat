@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Book a Seat</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="semantic/semantic.min.css">
+  <script src="semantic/semantic.min.js"></script>
+  <style>
+      body {
+          background-color: #FFFFFF;
+      }
+      h1 {
+          padding-bottom: 50px;
+      }
+      .ui.search > .results.visible {
+        position: relative;
+        margin: 0 auto;
+      }
+  </style>
+</head>
+<body>
+  <div class="ui inverted vertical masthead center aligned segment">
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+          <div class="left item">
+              <a class="ui inverted button" id="UserName">Home</a>
+          </div>
+          <div class="right item">
+            <a class="ui inverted button" id="SignOut">Sign out</a>
+          </div>
+        </div>
+      </div>
+      <div class="ui text container">
+        <h1 class="ui inverted header">
+          <i class="cogs icon"></i>
+          Management Information
+        </h1>
+      </div>
+  </div>  
+  <h3 class="ui header center aligned">
+    <div class="ui compact text menu">
+      <div class="header item">Performance Date</div>
+      <a class="item active" id="jan">
+        1/31/2021
+      </a>
+      <a class="item" id="feb">
+        2/28/2021
+      </a>
+      <a class="item" id="mar">
+        3/31/2021
+      </a>
+    </div>
+  </h3>
+  <h2 class="ui header center aligned">
+    <i class="chart line icon"></i>
+    Statistics
+  </h2>
+  <div class="ui three statistics">
+    <div class="statistic">
+      <div class="value" id="tSold"> 
+        <div class="ui active inline loader"></div>
+      </div>
+      <div class="label">
+        <i class="ticket icon"></i> Tickets sold
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="value" id="tRemaining">
+        <div class="ui active inline loader"></div>
+      </div>
+      <div class="label">
+        <i class="ticket icon"></i> Tickets remaining
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="value" id="tRevenue">
+        <div class="ui active inline loader"></div>
+      </div>
+      <div class="label">
+        <i class="money bill alternate outline icon"></i> Revenue
+      </div>
+    </div>
+  </div>
+  <div class="ui container" style="padding-left: 200px; padding-right: 200px; padding-top: 50px;">
+    <div class="ui fluid card">
+      <div class="content">
+        <div class="header center aligned" style="font-weight: bolder;">
+          List of Ticket Holders
+        </div>
+      </div>
+      <div class="content center aligned" id="list" style="font-weight: 100;">
+        <div class="ui active inline loader"></div>
+      </div>
+    </div>
+  </div>
+  <h2 class="ui header center aligned">
+    Block a seat
+  </h2>
+  <div class="ui center aligned ui grid" style="padding-top: 10px;">
+    <form class="ui form" id="blockingForm">
+      <div class="field">
+        <label>Seat Number</label>
+        <input type="number" name="number" id="number" placeholder="0">
+      </div>
+      <button class="ui button" type="submit">Block selected seat</button>
+    </form>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+  <script src="org.js"></script>
+  <script>
+    $(document)
+      .ready(function() {
+        $('.ui.form')
+          .form({
+            fields: {
+                number: {
+                    identifier : 'number',
+                    rules: [{
+                        type : 'empty',
+                        prompt : 'Please enter the seat number to block'
+                    }
+                  ]
+                },
+                }
+            })
+            ;
+         });
+  </script>
+  <script>
+  $('.ui.dropdown')
+    .dropdown()
+  ;
+  </script>
+</body>
+</html>

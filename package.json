@@ -14,9 +14,9 @@
   "keywords": [],
   "author": {
     "name": "Yasith",
-    "email": "42208881+ItsBlck@users.noreply.github.com"
+    "email": "yasithdsl@gmail.com"
   },
-  "license": "MIT",
+  "license": "GNU3",
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -45,7 +45,8 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "firebase": "^8.2.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
