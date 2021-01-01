@@ -1,5 +1,9 @@
-# Book a seat 
+# Book a Seat 
 Desktop application for booking seats. A Level Computer Science end-of-term project
+
+Welcome to Book a Seat.
+Here you can manage and organise large seating arrangements for performances and gatherings, allow easy purchasing, reserving and management of seats and a complete dashboard to view analytics for event organisers.
+Currently includes seating arrangements for only 3 dates but can be increased using the firbase console.
 
 This application is a development of the PerformanceProject.
 
