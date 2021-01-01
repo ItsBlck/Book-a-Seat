@@ -7,6 +7,12 @@ Currently includes seating arrangements for only 3 dates but can be increased us
 
 This application is a development of the PerformanceProject.
 
+# Usage
+
+In terminal type
+
+npm start
+
 Using Electron.js, Semantic UI for Desktop application.
 Google Cloud Platform for online database and cloud storage.
 <a href="https://iconscout.com/icons/ticket" target="_blank">Ticket Icon</a> on <a href="https://iconscout.com">Iconscout</a>
