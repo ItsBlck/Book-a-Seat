@@ -9,5 +9,5 @@ This application is a development of the PerformanceProject.
 
 Using Electron.js, Semantic UI for Desktop application.
 Google Cloud Platform for online database and cloud storage.
-
+<a href="https://iconscout.com/icons/ticket" target="_blank">Ticket Icon</a> on <a href="https://iconscout.com">Iconscout</a>
 This is a project made by Yasith Disanayaka
