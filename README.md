@@ -13,9 +13,7 @@ In terminal type
 
 npm start
 
-Or use production executable downloadable <a href="https://www.mediafire.com/file/3nbrv5pf7pw6z18/Book_a_Seat.exe/file">here</a>
-
-Virus free download.
+Or download the release files <a href="https://drive.google.com/file/d/19eAVuD9h0Tf5ke0j1Knxz3H4EJG-Qt0b/view?usp=sharing">here</a>.
 
 Using Electron.js, Semantic UI for Desktop application.
 Google Cloud Platform for online database and cloud storage.
